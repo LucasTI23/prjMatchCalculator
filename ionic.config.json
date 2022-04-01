@@ -1,0 +1,7 @@
+{
+  "name": "prjATIVIDADE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
