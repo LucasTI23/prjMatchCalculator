@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      MATCH CALCULATOR
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,47 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">MATCH CALCULATOR</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="container d-flex flex-column align-items-center justify-content-center">
+
+    <ion-item>
+      <div class="ms-5 mb-3">
+        <label for="" class="form-label">Digite o primeiro nome</label>
+        <input type="" class="form-control" id="nome1" placeholder="" [(ngModel)]="nome1">
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <div class="ms-5 mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Digite o segundo nome</label>
+        <input type="" class="form-control" id="nome2" placeholder="" [(ngModel)]="nome2">
+      </div>
+    </ion-item>
+    
+    <div>
+      <button type="button" class="btn btn-outline-primary mt-4 mb-3 ms-5 px-3 btn-lg" (click)="matchFinal()">
+        Calcular Match
+      </button>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ion-label class="ms-5 ">
+        <div [class.vibrate-1] = "load" class="text-center">{{result}} %</div>
+      </ion-label>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ion-label class="ms-5 mt-3 mb-3">
+        {{msg}}
+      </ion-label>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ion-img class="image-fluid img-thumbnail w-25 text-center" src="{{ imgEscolhida }}"></ion-img>
+    </div>
+    
   </div>
 </ion-content>
